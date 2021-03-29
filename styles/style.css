@@ -1,0 +1,466 @@
+/* убрал общие стили */
+/*как вы сказали, сделал везде правильные z-index*/
+/*указал комментарии, что изменил, чтобы так было проще проверять*/
+/* просьба, проверьте, пожалуйста, везде ли я сбросил марджины или надо где-то еще */
+/*спасибо за подробные комментарии и особенно ссылки на полезные материалы, это прмо топ*/
+
+.page {
+  min-width: 1100px;
+  /* мы ещё не умеем делать мобильную версию сайта, */
+  /* поэтому выше установлена минимальная ширина страницы */
+  max-width: 1600px;
+  /* выше установили ограничение по максимальной ширине */
+  margin: 0 auto;
+  /* выше для экранов больше 1600px отцентрировали весь контент */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  /* укажем ниже общий фон для страницы */
+  background-color: #fff;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 64px;
+  /* выше сделали сразу внутренний отступ у хэдэра для элементов, расположенных слева */
+  background-color: #f2f2f2;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 756px;
+  /* выше установили ограничения для секции */
+  overflow: hidden;
+  /* добавили выше данное значение, чтобы обрезать контент(header__square-pic), выходящий за границы хэдера */
+}
+
+.header__title {
+  margin: 0;
+  /* выше обнулил вертикальные марджины */
+  text-align: left;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: 700;
+  width: 730px;
+  z-index: 2;
+}
+
+.header__subtitle {
+  margin: 0;
+  /* выше обнулил вертикальные марджины (не заметил, что не сделал это) */
+  position: absolute;
+  text-align: left;
+  width: 388px;
+  bottom: 30px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  z-index: 2;
+}
+
+.header__link {
+  color: #2f80ed;
+  transition-duration: 0.3s;
+  text-decoration: none;
+  /* выше убрали подчеркивание у ссылки и сделали плавную анимацию перехода (ниже будет сделано аналогично у других ссылок и картинок, логотипов) */
+}
+
+  /* ниже сделаем так, чтобы цвет ссылки менялся на другой цвет при наведении (ниже сделаем так у всех ссылок) */
+.header__link:hover {
+  color: #003780;
+}
+
+/* ниже сделали так, чтобы при нажати возввращался исходный текст у ссылки (ниже сделаем так у всех ссылок, но кроме картинок) */
+.header__link:active {
+  color: #2f80ed;
+}
+
+.header__main-illustration {
+  position: absolute;
+  width: 765px;
+  height: 608px;
+  /* ниже картинку ставим в качестве фона (более презентабельный вид что ли получается). В других случаях снизу сделано аналогично */
+  background: url(../images/header-image.png);
+  /* ниже пришлось идти на ухищрения, чтобы растянуть вширь бэкгрануд как в макете */
+  background-position: bottom right;
+  background-size: cover;
+  background-size: 765px 100%;
+  background-repeat: no-repeat;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.header__square-pic {
+  position: absolute;
+  width: 568px;
+  height: 568px;
+  background-color: #2f80ed;
+  top: 64px;
+  right: 0px;
+  z-index: 0;
+}
+
+.logo_place_header {
+  width: 183px;
+  height: 32px;
+  position: absolute;
+  top: 30px;
+  transition-duration: 0.3s;
+}
+
+/* ниже (и выше строчка) наведем немножко красоты (лого немного инвертирует окраску при наведении) */
+.logo_place_header:hover {
+  filter: invert(0.2);
+}
+
+.description {
+  margin: 0;
+  width: 100%;
+  padding-top: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.two-columns {
+  margin: 0;
+  width: 80%;
+  /* удалил min-height: 400px; из кода */
+  display: flex;
+  justify-content: space-between;
+}
+
+.two-columns__brief {
+  margin: 0;
+  width: 175px;
+  height: 100%;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2f80ed;
+  /*выше добавил цвет для заголовка (моя невнимательность)*/
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.two-columns__paragraph {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+  /* ниже уберем внешние отступы для последней строчки */
+.two-columns__paragraph:last-of-type {
+  margin: 0;
+}
+
+.two-columns__span-accent {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.digits {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.table {
+  margin: 0;
+  padding: 0;
+  /* выше убрали лишнее пространство слева у "списка" */
+  width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.table__cell {
+  margin: 0;
+  margin-top: 60px;
+  width: 250px;
+  /* ниже уберем лишние маркеры */
+  list-style-type: none;
+}
+
+.table__heading {
+  margin: 0;
+  /*ниже убрал padding-bottom: 20px; и класс table__text_paragraph (меня смутил макет, там как-раз таки нарисован внутренний отступ: 1ая и 2ая клетка наглядно это показывают). спасибо, что правильно направили */
+  line-height: 1.15;
+  text-align: left;
+  font-size: 24px;
+}
+
+.table__text {
+  margin: 0;
+  margin-top: 20px;
+  line-height: 1.2;
+  font-size: 18px;
+  text-align: left;
+}
+
+.table_theme_dark {
+  margin: 0;
+  z-index: 1;
+}
+
+.table__cell_theme_dark {
+  margin-top: 80px;
+  width: 200px;
+}
+
+.table__heading_theme_dark {
+  color: #fff;
+}
+
+.table__text_theme_dark {
+  color: #fff;
+}
+
+.feynman {
+  min-height: 790px;
+  /*выше указал min-height вместо height*/
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  background: url(../images/feynman.png);
+  background-size: 867px 637px;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-color: #f2f2f2;
+  z-index: 0;
+}
+
+.feynman__link {
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  color: #2f80ed;
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  transition-duration: 0.3s;
+  text-decoration: none;
+}
+
+.feynman__link:hover {
+  color: #003780;
+}
+
+.feynman__link:active {
+  color: #2f80ed;
+}
+
+.feynman__title {
+  margin: 0;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 700;
+  width: 648px;
+  z-index: 1;
+}
+
+.feynman__subtitle {
+  margin: 0;
+  margin-top: 70px;
+  text-align: center;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  z-index: 1;
+}
+
+.section-title {
+  margin: 0;
+  width: 60%;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.section-subtitle {
+  margin: 0;
+  width: 60%;
+  padding-top: 20px;
+  text-align: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #000;
+  z-index: 1;
+}
+
+.section-title_theme_dark {
+  color: #fff;
+}
+
+.section-subtitle_theme_dark {
+  color: #fff;
+}
+
+.kaufman {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:90px;
+  padding-bottom:90px;
+  background-color: #1f1f1f;
+  overflow: hidden;
+  color: #fff;
+  /*ниже сделал правильный z-index для треугольника*/
+  z-index: 0;
+}
+
+.kaufman__triangle {
+  position: absolute;
+  width: 877px;
+  height: 877px;
+  background: url(../images/kaufman-triangle.svg);
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  top: 0;
+  right: -210px;
+  /*ниже сделал правильный z-index для треугольника*/
+  z-index: -1;
+}
+
+.footer {
+  min-height: 350px;
+  width: 100%;
+  box-sizing: border-box;
+  /* выше задал border-box, только вообще не понял зачем нам по этому заданию это делать -_- */
+  background-color: #1f1f1f;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.footer__columns {
+  /* ниже добавил мин-высоту для более красивого отображения (как в макете) */
+  min-height: 250px;
+  width: 90%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__column_content_copyright {
+  flex-basis: 711px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* выше отпозиционировал лого и копирайт. но из-за flex-direction: column лого теперь стало кликабельным на ширину 711px. в чем проблема пока понять не могу */
+}
+
+.logo_place_footer {
+  width: 183px;
+  height: 35px;
+  transition-duration: 0.3s;
+  /* удалил абсолютное позиционирование */
+}
+
+.logo_place_footer:hover {
+  filter: invert(1);
+}
+
+/* ниже сделаем так, чтобы ссылка в футере была не всю ширину .footer__column_content_copyright */
+.logo_place_footer-a {
+  width: fit-content;
+}
+
+.footer__author {
+  margin: 0;
+  padding-bottom: 18px;
+  padding-top: 18px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  /* удалил абсолютное позиционирование */
+}
+
+footer__column-link-a {
+  color: #fff;
+}
+/* удалил теги "a" ; внизу добавил новый класс под ссылки в футере*/
+
+footer__column-link-a:hover {
+  color: #4f4f4f;
+}
+
+.footer__column_content_info {
+  margin: 0;
+}
+
+.footer__column-heading {
+  margin: 0;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.footer__column-links {
+  margin: 0;
+  padding: 0;
+  /* выше убрали лишнее пространство слева у "списка" */
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__column-link {
+  margin: 0;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #fff;
+  /* ниже уберем лишние маркеры */
+  list-style-type: none;
+}
+
+/* а вот ниже и сами классы под ссылки в футере*/
+.footer__column-link-a {
+  color: #fff;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.footer__column-link-a:hover {
+  color: #4f4f4f;
+}
+
+.footer__column_content_social {
+  margin: 0;
+}
+
+.footer__social-icon {
+  margin: 0;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}

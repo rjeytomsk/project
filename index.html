@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Научиться учиться</title>
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <a href="https://praktikum.yandex.ru/" target="_blank"><img src="./images/logo_place_header.svg" alt="Лого" class="logo logo_place_header"></a>
+      <h1 class="header__title">Научиться учиться</h1>
+      <p class="header__subtitle">Какие современные и эффективные подходы к обучению вы можете использовать в своей жизни? <a href="#methods" class="header__link">Узнать &rarr;</a></p>
+      <div class="header__main-illustration"></div>
+      <div class="header__square-pic"></div>
+    </header>
+    <main class="content">
+      <section class="description">
+        <!--ниже заменил див на атикл-->
+        <!--после этого при проверке на валидаторе index.html мне выдало предупреждение-->
+        <!--Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.-->
+        <!--мол в section должен быть обязательно заголовок. а он у нас в article получается, если я все правильно понял -->
+        <article class="two-columns">
+          <h2 class="two-columns__brief">Главные проблемы в обучении</h2>
+          <div class="two-columns__main-text">
+            <p class="two-columns__paragraph">Ни в школе, ни в институте нас не учат тому, как правильно изучать материал. Мы готовимся к эказменам и учим билеты. Мы тренируемся решать однообразные задачи, чтобы лучше сдать тест, но часто в итоге это не дает нам реального знания. Зубрежка быстро выветривается и не приносит пользы.</p>
+            <p class="two-columns__paragraph"><span class="two-columns__span-accent">Вывод:</span> учиться тоже нужно уметь, но почему-то этому мало где учат. Что с этим делать?</p>
+            <p class="two-columns__paragraph">Конкретные техники и упражнения помогают изменить подход к обучению, сделать его эффективным и захватывающим. Эти же техники применяются на примере обучения в Практикуме.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="digits">
+        <!--ниже убрал класс section-subtitle_theme_light. соглашусь, лишнего добавил зачем-то-->
+        <h2 class="section-title">Цифры и факты</h2>
+        <!--ниже изменил <h3> на <p>, следуя иерархии заголовков (верно же?); еще тут удалил класс section-subtitle_theme_light-->
+        <p class="section-subtitle">Про учёбу и мозг</p>
+        <!--ниже сделал в виде "таблицы"-->
+        <ul class="table">
+          <li class="table__cell">
+            <!--ниже и далее по всей странице меняем <h4> на <h3>, следуя иерархии заголовков-->
+            <h3 class="table__heading">86 миллиардов</h3>
+            <p class="table__text">Число нейронов в мозге человека</p>
+          </li>
+          <li class="table__cell">
+            <h3 class="table__heading">2.1 миллиарда</h3>
+            <p class="table__text">Число нуждающихся в повышении квалификации</p>
+            <!--ниже убрал класс table__text_paragraph за ненадобностью-->
+            <p class="table__text">Всемирный Банк, 2017</p>
+          </li>
+          <li class="table__cell">
+            <h3 class="table__heading">1000 террабайт</h3>
+            <p class="table__text">Объём памяти человека</p>
+          </li>
+          <li class="table__cell">
+            <h3 class="table__heading">500 триллионов</h3>
+            <p class="table__text">Число ответственных за обучение нервных синапсов у взрослого человека</p>
+          </li>
+          <li class="table__cell">
+            <h3 class="table__heading">420 миллионов</h3>
+            <p class="table__text">Число взрослых людей моложе 25 лет, не имеющих образования для трудоустройства</p>
+            <!--ниже убрал класс table__text_paragraph за ненадобностью-->
+            <p class="table__text">Всемирный Банк, 2017</p>
+          </li>
+          <li class="table__cell">
+            <h3 class="table__heading">17-20 лет</h3>
+            <p class="table__text">Пик обучаемости</p>
+          </li>
+          <li class="table__cell">
+            <h3 class="table__heading">1885 год</h3>
+            <p class="table__text">Открытие кривой забывания</p>
+          </li>
+          <li class="table__cell">
+            <h3 class="table__heading">86 миллиардов</h3>
+            <p class="table__text">Число нейронов в мозге человека</p>
+          </li>
+        </ul>
+      </section>
+
+      <!--ниже убрал элемент feynman__feynman-circle (для картинки). картинку сделал фоном в feynman-->
+      <section class="feynman" id="methods">
+        <h2 class="feynman__title">Метод Фейнмана</h2>
+        <!--ниже сделал подзаголовок элементом <p>-->
+        <p class="feynman__subtitle">Выучить и не забыть.</p>
+        <a href="https://lifehacker.ru/metod-fejnmana/" class="feynman__link" target="blank">Подробнее &rarr;</a>
+      </section>
+
+      <section class="kaufman">
+        <h2 class="section-title section-title_theme_dark">Принципы обучения</h2>
+        <!--ниже сделал подзаголовок элементом <p>-->
+        <p class="section-subtitle section-subtitle_theme_dark">от Джоша Кауфмана</p>
+        <div class="kaufman__triangle"></div>
+        <!--ниже сделал в виде "таблицы"-->
+        <ul class="table table_theme_dark">
+          <li class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading table__heading_theme_dark">1</h3>
+            <!--ниже сделал везде text элементом блока table (первый раз опечатку везде случайно сделал)-->
+            <p class="table__text table__text_theme_dark">Выберите правильный проект.</p>
+          </li>
+          <li class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading table__heading_theme_dark">2</h3>
+            <p class="table__text table__text_theme_dark">Сосредоточьтесь на каком-то одном навыке.</p>
+          </li>
+          <li class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading table__heading_theme_dark">3</h3>
+            <p class="table__text table__text_theme_dark">Определите целевой уровень мастерства.</p>
+          </li>
+          <li class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading table__heading_theme_dark">4</h3>
+            <p class="table__text table__text_theme_dark">Разбейте навык на элементы.</p>
+          </li>
+          <li class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading table__heading_theme_dark">5</h3>
+            <p class="table__text table__text_theme_dark">Приготовьте всё необходимое для занятий.</p>
+          </li>
+          <li class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading table__heading_theme_dark">6</h3>
+            <p class="table__text table__text_theme_dark">Устраните препятствия для занятий.</p>
+          </li>
+          <li class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading table__heading_theme_dark">7</h3>
+            <p class="table__text table__text_theme_dark">Выделите специальное время для занятий</p>
+          </li>
+          <li class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading table__heading_theme_dark">8</h3>
+            <p class="table__text table__text_theme_dark">Создайте быстрые петли обратной связи.</p>
+          </li>
+          <li class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading table__heading_theme_dark">9</h3>
+            <p class="table__text table__text_theme_dark">Занимайтесь по расписанию, короткими интенсивными интервалами.</p>
+          </li>
+          <li class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading table__heading_theme_dark">10</h3>
+            <p class="table__text table__text_theme_dark">Уделяйте внимание количеству и скорости.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__columns">
+        <!--ниже изменил название класса на указанное в брифе-->
+        <div class="footer__column_content_copyright">
+          <a href="https://praktikum.yandex.ru/" class="logo_place_footer-a" target="_blank"><img src="./images/logo_place_footer.svg" alt="Лого" class="logo logo_place_footer"></a>
+          <p class="footer__author">&copy; 2021. <a href="http://evgenyromanovskiy.ru/" class="footer__column-link-a logo_place_footer-a" target="blank">Евгений Романовский</a></p>
+        </div>
+        <!--ниже в статье указано, что <nav> ставится непосредтсвенно перед ссылками. мы указываем его тут, а не в footer__column-links, потому что там идет список?? -->
+        <!--ниже изменил название класса на указанное в брифе-->
+        <nav class="footer__column_content_info">
+          <!--иерархию заголовка поменял. проверил иерархию на странице везде-->
+          <h3 class="footer__column-heading">О Практикуме</h3>
+          <!--ниже сделал ссылки списком-->
+          <ul class="footer__column-links">
+            <li class="footer__column-link"><a href="https://praktikum.yandex.ru/" class="footer__column-link-a" target="_blank">Главная</a></li>
+            <li class="footer__column-link"><a href="https://vc.ru/hr/74130-yandeks-praktikum-otzyvy-ot-sozdateley-konkurentov-i-uchenikov" class="footer__column-link-a" target="_blank">Концепция</a></li>
+            <li class="footer__column-link"><a href="https://praktikum.yandex.ru/promo/mentors-school#otzyvy" class="footer__column-link-a" target="_blank">Наставники</a></li>
+          </ul>
+        </nav>
+        <!--ниже изменил название класса на указанное в брифе-->
+        <div class="footer__column_content_social">
+          <!--ниже заменил <h5> на <h3>-->
+          <h3 class="footer__column-heading">Соцсети</h3>
+          <!--ниже сделал ссылки списком-->
+          <ul class="footer__column-links">
+            <li class="footer__column-link"><a href="https://www.facebook.com/yandex.praktikum/" class="footer__column-link-a" target="_blank"><img src="./images/facebook_color_white.svg" alt="Facebook" class="footer__social-icon">Facebook</a></li>
+            <li class="footer__column-link"><a href="https://vk.com/yandex.praktikum" class="footer__column-link-a" target="_blank"><img src="./images/vk_color_white.svg" alt="ВКонтакте" class="footer__social-icon">ВКонтакте</a></li>
+            <li class="footer__column-link"><a href="https://www.instagram.com/yndx.praktikum/" class="footer__column-link-a" target="_blank"><img src="./images/instagram_color_white.svg" alt="Instagram" class="footer__social-icon">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
